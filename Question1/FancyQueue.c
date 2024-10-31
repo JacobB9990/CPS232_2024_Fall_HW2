@@ -53,17 +53,17 @@ int dequeue(FancyQueue *queue) {
         return -1;
     }
 
-    int value = queue->data[queue->head]; // Get the value at the head
-    queue->head = (queue->head + 1) % MAX_SIZE; // Update head index circularly
-    queue->size--; // Decrease the size of the queue
-    return value; // Return the dequeued value
+    int value = queue->data[queue->head]; // Value at the head
+    queue->head = (queue->head + 1) % MAX_SIZE; // Update head index
+    queue->size--; // Decrease the size
+    return value; //
 }
 
 int main() {
     FancyQueue queue;
-    initQueue(&queue); // Initialize the queue
+    initQueue(&queue);
 
-    srand(time(NULL)); // Makes sure to have a different random seed
+    srand(time(NULL)); // Makes sure each run is unique
 
     for (int i = 0; i < 50; i++) {
         int rando = rand() % 3 + 1; // Random number between 1 and 3
@@ -79,8 +79,8 @@ int main() {
         }
 
         printQueue(&queue); // Print the current state of the queue
-        Sleep(250); // Pause for 250 milliseconds for better visibility
+        Sleep(250); // Pause for 250 milliseconds
     }
 
-    return 0; // End of the program
+    return 0;
 }
