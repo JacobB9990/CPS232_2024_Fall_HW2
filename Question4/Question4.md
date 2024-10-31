@@ -1,0 +1,1 @@
+4. **(25 pts)** Given a sorted list of `n` numbers in ascending order, search for a number `i << n` (i.e `i` is much smaller than `n`). Please design an algorithm that is more efficient than binary search in this case in terms of running time (i.e., the running time of the desired algorithm should be better than `O(log n)`).
