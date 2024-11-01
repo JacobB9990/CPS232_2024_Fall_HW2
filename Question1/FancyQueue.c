@@ -21,7 +21,7 @@ void printQueue(FancyQueue *queue) {
     
     for (int i = 0; i < queue->size; i++) {
         int index = (queue->head + i) % MAX_SIZE; // Gets index, wrapping around the array.
-        printf("\"%d\" - ", queue->data[index]);  // Print each element
+        printf("%d - ", queue->data[index]);  // Print each element
     }
     
     printf(" NULL \n "); // End of the queue
@@ -56,7 +56,7 @@ int dequeue(FancyQueue *queue) {
     int value = queue->data[queue->head]; // Value at the head
     queue->head = (queue->head + 1) % MAX_SIZE; // Update head index
     queue->size--; // Decrease the size
-    return value; //
+    return value;
 }
 
 int main() {
@@ -65,7 +65,7 @@ int main() {
 
     srand(time(NULL)); // Makes sure each run is unique
 
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 20; i++) {
         int rando = rand() % 3 + 1; // Random number between 1 and 3
 
         if (rando == 1 || rando == 2) {
